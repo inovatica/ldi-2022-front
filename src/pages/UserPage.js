@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import { filter } from 'lodash';
 import { sentenceCase } from 'change-case';
 import { useState } from 'react';
@@ -148,16 +147,12 @@ export default function UserPage() {
 
   return (
     <>
-      <Helmet>
-        <title> User | Minimal UI </title>
-      </Helmet>
-
       <Container>
-        <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
-          <Typography variant="h4" gutterBottom>
+        <Stack direction='row' alignItems='center' justifyContent='space-between' mb={5}>
+          <Typography variant='h4' gutterBottom>
             User
           </Typography>
-          <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
+          <Button variant='contained' startIcon={<Iconify icon='eva:plus-fill' />}>
             New User
           </Button>
         </Stack>
@@ -183,32 +178,32 @@ export default function UserPage() {
                     const selectedUser = selected.indexOf(name) !== -1;
 
                     return (
-                      <TableRow hover key={id} tabIndex={-1} role="checkbox" selected={selectedUser}>
-                        <TableCell padding="checkbox">
+                      <TableRow hover key={id} tabIndex={-1} role='checkbox' selected={selectedUser}>
+                        <TableCell padding='checkbox'>
                           <Checkbox checked={selectedUser} onChange={(event) => handleClick(event, name)} />
                         </TableCell>
 
-                        <TableCell component="th" scope="row" padding="none">
-                          <Stack direction="row" alignItems="center" spacing={2}>
+                        <TableCell component='th' scope='row' padding='none'>
+                          <Stack direction='row' alignItems='center' spacing={2}>
                             <Avatar alt={name} src={avatarUrl} />
-                            <Typography variant="subtitle2" noWrap>
+                            <Typography variant='subtitle2' noWrap>
                               {name}
                             </Typography>
                           </Stack>
                         </TableCell>
 
-                        <TableCell align="left">{company}</TableCell>
+                        <TableCell align='left'>{company}</TableCell>
 
-                        <TableCell align="left">{role}</TableCell>
+                        <TableCell align='left'>{role}</TableCell>
 
-                        <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell>
+                        <TableCell align='left'>{isVerified ? 'Yes' : 'No'}</TableCell>
 
-                        <TableCell align="left">
+                        <TableCell align='left'>
                           <Label color={(status === 'banned' && 'error') || 'success'}>{sentenceCase(status)}</Label>
                         </TableCell>
 
-                        <TableCell align="right">
-                          <IconButton size="large" color="inherit" onClick={handleOpenMenu}>
+                        <TableCell align='right'>
+                          <IconButton size='large' color='inherit' onClick={handleOpenMenu}>
                             <Iconify icon={'eva:more-vertical-fill'} />
                           </IconButton>
                         </TableCell>
@@ -225,17 +220,17 @@ export default function UserPage() {
                 {isNotFound && (
                   <TableBody>
                     <TableRow>
-                      <TableCell align="center" colSpan={6} sx={{ py: 3 }}>
+                      <TableCell align='center' colSpan={6} sx={{ py: 3 }}>
                         <Paper
                           sx={{
                             textAlign: 'center',
                           }}
                         >
-                          <Typography variant="h6" paragraph>
+                          <Typography variant='h6' paragraph>
                             Not found
                           </Typography>
 
-                          <Typography variant="body2">
+                          <Typography variant='body2'>
                             No results found for &nbsp;
                             <strong>&quot;{filterName}&quot;</strong>.
                             <br /> Try checking for typos or using complete words.
@@ -251,7 +246,7 @@ export default function UserPage() {
 
           <TablePagination
             rowsPerPageOptions={[5, 10, 25]}
-            component="div"
+            component='div'
             count={USERLIST.length}
             rowsPerPage={rowsPerPage}
             page={page}
