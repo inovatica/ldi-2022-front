@@ -6,10 +6,10 @@ import { bgBlur } from '../../utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
-export default function StyledChart() {
+export default function ChartStyles() {
   const theme = useTheme();
 
-  // It is a good practice to hoist the <GlobalStyles /> to a static constant, to avoid rerendering. 
+  // It is a good practice to hoist the <GlobalStyles /> to a static constant, to avoid rerendering.
   // This will ensure that the <style> tag generated would not recalculate on each render.
   const inputGlobalStyles = (
     <GlobalStyles

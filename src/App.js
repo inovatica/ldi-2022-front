@@ -3,14 +3,14 @@ import Router from './routes';
 // theme
 import ThemeProvider from './theme';
 // components
-import { StyledChart } from './components/chart';
+import { ChartStyles } from './components/chart';
 
 // ----------------------------------------------------------------------
 
 export default function App() {
   return (
     <ThemeProvider>
-      <StyledChart />
+      <ChartStyles />
       <Router />
     </ThemeProvider>
   );
