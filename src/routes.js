@@ -1,5 +1,6 @@
 import { Navigate, useRoutes } from 'react-router-dom';
 // layouts
+// eslint-disable-next-line import/no-named-as-default
 import DashboardLayout from './layouts/dashboard';
 import SimpleLayout from './layouts/simple';
 //
