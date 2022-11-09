@@ -3,7 +3,7 @@ import { alpha } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-export function bgBlur(props) {
+export const bgBlur = (props) => {
   const color = props?.color || '#000000';
   const blur = props?.blur || 6;
   const opacity = props?.opacity || 0.8;
@@ -37,7 +37,7 @@ export function bgBlur(props) {
 
 // ----------------------------------------------------------------------
 
-export function bgGradient(props) {
+export const bgGradient = (props) => {
   const direction = props?.direction || 'to bottom';
   const startColor = props?.startColor;
   const endColor = props?.endColor;
@@ -60,23 +60,19 @@ export function bgGradient(props) {
 
 // ----------------------------------------------------------------------
 
-export function textGradient(value) {
-  return {
+export const textGradient = (value) => ({
     background: `-webkit-linear-gradient(${value})`,
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
-  };
-}
+  })
 
 // ----------------------------------------------------------------------
 
-export function filterStyles(value) {
-  return {
+export const filterStyles = (value) => ({
     filter: value,
     WebkitFilter: value,
     MozFilter: value,
-  };
-}
+  })
 
 // ----------------------------------------------------------------------
 
