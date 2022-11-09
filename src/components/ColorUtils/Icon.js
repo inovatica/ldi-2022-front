@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { alpha } from '@mui/material/styles';
 import { Box } from '@mui/material';
 //
-import Iconify from '../Iconify';
+import { Iconify } from '../Iconify';
 
 // ----------------------------------------------------------------------
 

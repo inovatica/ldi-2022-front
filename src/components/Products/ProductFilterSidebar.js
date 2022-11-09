@@ -16,7 +16,7 @@ import {
   FormControlLabel,
 } from '@mui/material';
 // components
-import Iconify from '../Iconify';
+import { Iconify } from '../Iconify';
 import { Scrollbar } from '../Scrollbar';
 import { ColorMultiPicker } from '../ColorUtils';
 

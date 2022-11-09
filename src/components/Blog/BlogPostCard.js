@@ -7,7 +7,7 @@ import { fDate } from '../../utils/formatTime';
 import { fShortenNumber } from '../../utils/formatNumber';
 //
 import SvgColor from '../SvgColor';
-import Iconify from '../Iconify';
+import { Iconify } from '../Iconify';
 
 // ----------------------------------------------------------------------
 
