@@ -6,7 +6,7 @@ import { bgBlur } from '../../utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
-export default function ChartStyles() {
+export const ChartStyles = () => {
   const theme = useTheme();
 
   // It is a good practice to hoist the <GlobalStyles /> to a static constant, to avoid rerendering.
@@ -60,4 +60,4 @@ export default function ChartStyles() {
   );
 
   return inputGlobalStyles;
-}
+};

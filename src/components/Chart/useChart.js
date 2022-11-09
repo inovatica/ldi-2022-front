@@ -4,7 +4,7 @@ import { useTheme, alpha } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-export default function useChart(options) {
+export const useChart = (options) => {
   const theme = useTheme();
 
   const LABEL_TOTAL = {
@@ -197,4 +197,4 @@ export default function useChart(options) {
   };
 
   return merge(baseOptions, options);
-}
+};
