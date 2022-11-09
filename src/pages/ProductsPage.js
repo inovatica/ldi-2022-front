@@ -8,7 +8,7 @@ import PRODUCTS from '../_mock/products';
 
 // ----------------------------------------------------------------------
 
-export default function ProductsPage() {
+const ProductsPage = () => {
   const [openFilter, setOpenFilter] = useState(false);
 
   const handleOpenFilter = () => {
@@ -40,4 +40,6 @@ export default function ProductsPage() {
       <ProductCartWidget />
     </Container>
   );
-}
+};
+
+export default ProductsPage;
