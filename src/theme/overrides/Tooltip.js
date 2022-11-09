@@ -1,7 +1,6 @@
 // ----------------------------------------------------------------------
 
-export default function Tooltip(theme) {
-  return {
+export const Tooltip = (theme) => ({
     MuiTooltip: {
       styleOverrides: {
         tooltip: {
@@ -12,5 +11,4 @@ export default function Tooltip(theme) {
         },
       },
     },
-  };
-}
+  })

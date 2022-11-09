@@ -1,7 +1,6 @@
 // ----------------------------------------------------------------------
 
-export default function Paper() {
-  return {
+export const Paper = () => ({
     MuiPaper: {
       defaultProps: {
         elevation: 0,
@@ -12,5 +11,4 @@ export default function Paper() {
         },
       },
     },
-  };
-}
+  })

@@ -1,17 +1,14 @@
-// routes
 import Router from './routes';
-// theme
-import ThemeProvider from './theme';
-// components
+import { ThemeProvider } from './theme';
 import { ChartStyles } from './components/Chart';
 
 // ----------------------------------------------------------------------
 
 const App = () => (
-    <ThemeProvider>
-      <ChartStyles />
-      <Router />
-    </ThemeProvider>
-  );
+  <ThemeProvider>
+    <ChartStyles />
+    <Router />
+  </ThemeProvider>
+);
 
 export default App;

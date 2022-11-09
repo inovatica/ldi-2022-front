@@ -4,20 +4,18 @@ import { useMemo } from 'react';
 import { CssBaseline } from '@mui/material';
 import { ThemeProvider as MUIThemeProvider, createTheme, StyledEngineProvider } from '@mui/material/styles';
 //
-import palette from './palette';
-import shadows from './shadows';
-import typography from './typography';
-import GlobalStyles from './globalStyles';
-import customShadows from './customShadows';
+import { palette } from './palette';
+import { shadows } from './shadows';
+import { typography } from './typography';
+import { GlobalStyles } from './globalStyles';
+import { customShadows } from './customShadows';
 import componentsOverride from './overrides';
 
 // ----------------------------------------------------------------------
 
-ThemeProvider.propTypes = {
-  children: PropTypes.node,
-};
+export const ThemeProvider = (props) => {
+  const { children } = props;
 
-export default function ThemeProvider({ children }) {
   const themeOptions = useMemo(
     () => ({
       palette,
@@ -41,4 +39,8 @@ export default function ThemeProvider({ children }) {
       </MUIThemeProvider>
     </StyledEngineProvider>
   );
-}
+};
+
+ThemeProvider.propTypes = {
+  children: PropTypes.node,
+};

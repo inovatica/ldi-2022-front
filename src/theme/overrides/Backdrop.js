@@ -2,8 +2,7 @@ import { alpha } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-export default function Backdrop(theme) {
-  return {
+export const Backdrop = (theme) => ({
     MuiBackdrop: {
       styleOverrides: {
         root: {
@@ -14,5 +13,4 @@ export default function Backdrop(theme) {
         },
       },
     },
-  };
-}
+  })

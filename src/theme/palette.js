@@ -70,7 +70,7 @@ const ERROR = {
   contrastText: '#fff',
 };
 
-const palette = {
+export const palette = {
   common: { black: '#000', white: '#fff' },
   primary: PRIMARY,
   secondary: SECONDARY,
@@ -101,5 +101,3 @@ const palette = {
     disabledOpacity: 0.48,
   },
 };
-
-export default palette;

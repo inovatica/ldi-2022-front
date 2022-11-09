@@ -1,13 +1,13 @@
 // @mui
 import { alpha } from '@mui/material/styles';
 //
-import palette from './palette';
+import { palette } from './palette';
 
 // ----------------------------------------------------------------------
 
 const color = palette.grey[500];
 
-export default function customShadows() {
+export const customShadows = () => {
   const transparent = alpha(color, 0.16);
   return {
     z1: `0 1px 2px 0 ${transparent}`,
@@ -29,4 +29,4 @@ export default function customShadows() {
     dialog: `-40px 40px 80px -8px ${alpha(color, 0.24)}`,
     dropdown: `0 0 2px 0 ${alpha(color, 0.24)}, -20px 20px 40px -4px ${alpha(color, 0.24)}`,
   };
-}
+};

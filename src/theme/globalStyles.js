@@ -3,7 +3,7 @@ import { GlobalStyles as MUIGlobalStyles } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
-export default function GlobalStyles() {
+export const GlobalStyles = () => {
   const inputGlobalStyles = (
     <MUIGlobalStyles
       styles={{
@@ -53,4 +53,4 @@ export default function GlobalStyles() {
   );
 
   return inputGlobalStyles;
-}
+};

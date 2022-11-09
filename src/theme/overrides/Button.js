@@ -2,8 +2,7 @@ import { alpha } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-export default function Button(theme) {
-  return {
+export const Button = (theme) => ({
     MuiButton: {
       styleOverrides: {
         root: {
@@ -40,5 +39,4 @@ export default function Button(theme) {
         },
       },
     },
-  };
-}
+  })

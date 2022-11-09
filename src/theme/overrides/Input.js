@@ -2,8 +2,7 @@ import { alpha } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-export default function Input(theme) {
-  return {
+export const Input = (theme) => ({
     MuiInputBase: {
       styleOverrides: {
         root: {
@@ -63,5 +62,4 @@ export default function Input(theme) {
         },
       },
     },
-  };
-}
+  })

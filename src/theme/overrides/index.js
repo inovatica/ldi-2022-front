@@ -1,18 +1,18 @@
 //
-import Card from './Card';
-import Paper from './Paper';
-import Input from './Input';
-import Table from './Table';
-import Button from './Button';
-import Tooltip from './Tooltip';
-import Backdrop from './Backdrop';
-import Typography from './Typography';
-import Autocomplete from './Autocomplete';
+import { Card } from './Card';
+import { Paper } from './Paper';
+import { Input } from './Input';
+import { Table } from './Table';
+import { Button } from './Button';
+import { Tooltip } from './Tooltip';
+import { Backdrop } from './Backdrop';
+import { Typography } from './Typography';
+import { Autocomplete } from './Autocomplete';
 
 // ----------------------------------------------------------------------
 
-export default function ComponentsOverrides(theme) {
-  return Object.assign(
+export const ComponentsOverrides = (theme) =>
+  Object.assign(
     Card(theme),
     Table(theme),
     Input(theme),
@@ -23,4 +23,5 @@ export default function ComponentsOverrides(theme) {
     Typography(theme),
     Autocomplete(theme)
   );
-}
+
+export default ComponentsOverrides;

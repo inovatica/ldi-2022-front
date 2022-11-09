@@ -1,15 +1,10 @@
 // ----------------------------------------------------------------------
 
-export function remToPx(value) {
-  return Math.round(parseFloat(value) * 16);
-}
+export const remToPx = (value) => Math.round(parseFloat(value) * 16)
 
-export function pxToRem(value) {
-  return `${value / 16}rem`;
-}
+export const pxToRem = (value) => `${value / 16}rem`
 
-export function responsiveFontSizes({ sm, md, lg }) {
-  return {
+export const responsiveFontSizes = ({ sm, md, lg }) => ({
     '@media (min-width:600px)': {
       fontSize: pxToRem(sm),
     },
@@ -19,15 +14,14 @@ export function responsiveFontSizes({ sm, md, lg }) {
     '@media (min-width:1200px)': {
       fontSize: pxToRem(lg),
     },
-  };
-}
+  })
 
 // ----------------------------------------------------------------------
 
 const FONT_PRIMARY = 'Public Sans, sans-serif'; // Google Font
 // const FONT_SECONDARY = 'CircularStd, sans-serif'; // Local Font
 
-const typography = {
+export const typography = {
   fontFamily: FONT_PRIMARY,
   fontWeightRegular: 400,
   fontWeightMedium: 600,
@@ -103,5 +97,3 @@ const typography = {
     textTransform: 'capitalize',
   },
 };
-
-export default typography;

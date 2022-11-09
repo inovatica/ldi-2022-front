@@ -1,7 +1,6 @@
 // ----------------------------------------------------------------------
 
-export default function Card(theme) {
-  return {
+export const Card = (theme) => ({
     MuiCard: {
       styleOverrides: {
         root: {
@@ -30,5 +29,4 @@ export default function Card(theme) {
         },
       },
     },
-  };
-}
+  })
