@@ -38,7 +38,9 @@ AppCurrentVisits.propTypes = {
   chartData: PropTypes.array,
 };
 
-export default function AppCurrentVisits({ title, subheader, chartColors, chartData, ...other }) {
+export const AppCurrentVisits = (props) => {
+  const { title, subheader, chartColors, chartData, ...other } = props;
+  
   const theme = useTheme();
 
   const chartLabels = chartData.map((i) => i.label);
@@ -74,4 +76,4 @@ export default function AppCurrentVisits({ title, subheader, chartColors, chartD
       </StyledChartWrapper>
     </Card>
   );
-}
+};

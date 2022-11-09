@@ -25,7 +25,9 @@ AppTasks.propTypes = {
   list: PropTypes.array.isRequired,
 };
 
-export default function AppTasks({ title, subheader, list, ...other }) {
+export const AppTasks = (props) => {
+  const { title, subheader, list, ...other } = props;
+
   const { control } = useForm({
     defaultValues: {
       taskCompleted: ['2'],
@@ -58,7 +60,7 @@ export default function AppTasks({ title, subheader, list, ...other }) {
       />
     </Card>
   );
-}
+};
 
 // ----------------------------------------------------------------------
 
@@ -71,7 +73,8 @@ TaskItem.propTypes = {
   }),
 };
 
-function TaskItem({ task, checked, onChange }) {
+const TaskItem = (props) => {
+  const { task, checked, onChange } = props;
   const [open, setOpen] = useState(null);
 
   const handleOpenMenu = (event) => {
@@ -165,4 +168,4 @@ function TaskItem({ task, checked, onChange }) {
       </Popover>
     </Stack>
   );
-}
+};

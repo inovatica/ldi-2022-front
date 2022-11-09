@@ -5,7 +5,7 @@ import { Box, Stack, Link, Card, Button, Divider, Typography, CardHeader } from 
 import { fToNow } from '../../utils/formatTime';
 // components
 import Iconify from '../Iconify';
-import Scrollbar from '../Scrollbar';
+import { Scrollbar } from '../Scrollbar';
 
 // ----------------------------------------------------------------------
 
@@ -15,7 +15,9 @@ AppNewsUpdate.propTypes = {
   list: PropTypes.array.isRequired,
 };
 
-export default function AppNewsUpdate({ title, subheader, list, ...other }) {
+export const AppNewsUpdate = (props) => {
+  const { title, subheader, list, ...other } = props;
+
   return (
     <Card {...other}>
       <CardHeader title={title} subheader={subheader} />
@@ -37,7 +39,7 @@ export default function AppNewsUpdate({ title, subheader, list, ...other }) {
       </Box>
     </Card>
   );
-}
+};
 
 // ----------------------------------------------------------------------
 
@@ -50,7 +52,8 @@ NewsItem.propTypes = {
   }),
 };
 
-function NewsItem({ news }) {
+const NewsItem = (props) => {
+  const { news } = props;
   const { image, title, description, postedAt } = news;
 
   return (
@@ -72,4 +75,4 @@ function NewsItem({ news }) {
       </Typography>
     </Stack>
   );
-}
+};

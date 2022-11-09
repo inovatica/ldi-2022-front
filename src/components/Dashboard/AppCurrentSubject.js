@@ -40,7 +40,9 @@ AppCurrentSubject.propTypes = {
   chartLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export default function AppCurrentSubject({ title, subheader, chartData, chartColors, chartLabels, ...other }) {
+export const AppCurrentSubject = (props) => {
+  const { title, subheader, chartData, chartColors, chartLabels, ...other } = props;
+  
   const chartOptions = useChart({
     stroke: { width: 2 },
     fill: { opacity: 0.48 },
@@ -64,4 +66,4 @@ export default function AppCurrentSubject({ title, subheader, chartData, chartCo
       </StyledChartWrapper>
     </Card>
   );
-}
+};

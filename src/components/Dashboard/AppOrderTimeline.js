@@ -13,7 +13,9 @@ AppOrderTimeline.propTypes = {
   list: PropTypes.array.isRequired,
 };
 
-export default function AppOrderTimeline({ title, subheader, list, ...other }) {
+export const AppOrderTimeline = (props) => {
+  const { title, subheader, list, ...other } = props;
+
   return (
     <Card {...other}>
       <CardHeader title={title} subheader={subheader} />
@@ -33,7 +35,7 @@ export default function AppOrderTimeline({ title, subheader, list, ...other }) {
       </CardContent>
     </Card>
   );
-}
+};
 
 // ----------------------------------------------------------------------
 
@@ -46,7 +48,8 @@ OrderItem.propTypes = {
   }),
 };
 
-function OrderItem({ item, isLast }) {
+const OrderItem = (props) => {
+  const { item, isLast } = props;
   const { type, title, time } = item;
   return (
     <TimelineItem>
@@ -64,12 +67,12 @@ function OrderItem({ item, isLast }) {
       </TimelineSeparator>
 
       <TimelineContent>
-        <Typography variant="subtitle2">{title}</Typography>
+        <Typography variant='subtitle2'>{title}</Typography>
 
-        <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+        <Typography variant='caption' sx={{ color: 'text.secondary' }}>
           {fDateTime(time)}
         </Typography>
       </TimelineContent>
     </TimelineItem>
   );
-}
+};

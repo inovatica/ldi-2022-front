@@ -30,7 +30,9 @@ AppWidgetSummary.propTypes = {
   sx: PropTypes.object,
 };
 
-export default function AppWidgetSummary({ title, total, icon, color = 'primary', sx, ...other }) {
+export const AppWidgetSummary = (props) => {
+  const { title, total, icon, color = 'primary', sx, ...other } = props;
+
   return (
     <Card
       sx={{
@@ -63,4 +65,4 @@ export default function AppWidgetSummary({ title, total, icon, color = 'primary'
       </Typography>
     </Card>
   );
-}
+};
