@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useCartState } from '../../providers/Cart';
 // @mui
 import { styled } from '@mui/material/styles';
@@ -32,8 +33,10 @@ const StyledRoot = styled('div')(({ theme }) => ({
 
 export const ProductCartWidget = () => {
   const cartState = useCartState();
+  const navigate = useNavigate();
+
   return (
-    <StyledRoot>
+    <StyledRoot onClick={() => navigate('../cart')}>
       <Badge showZero badgeContent={cartState.totalQuantity} color='error' max={99}>
         <Iconify icon='eva:shopping-cart-fill' width={24} height={24} />
       </Badge>
