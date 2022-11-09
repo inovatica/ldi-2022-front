@@ -12,9 +12,6 @@ import useResponsive from '../../../hooks/useResponsive';
 import Logo from '../../../components/Logo';
 import Scrollbar from '../../../components/Scrollbar';
 import NavSection from './NavSection';
-//
-import navConfig from './config';
-
 // ----------------------------------------------------------------------
 
 const NAV_WIDTH = 280;
@@ -75,7 +72,7 @@ export default function Nav({ openNav, onCloseNav }) {
         </Link>
       </Box>
 
-      <NavSection data={navConfig} />
+      <NavSection />
     </Scrollbar>
   );
 

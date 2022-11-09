@@ -7,14 +7,11 @@ import { StyledNavItem, StyledNavItemIcon } from './styles';
 import SvgColor from '../../../components/SvgColor';
 
 // ----------------------------------------------------------------------
+const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{ width: 1, height: 1 }} />;
 
-NavSection.propTypes = {
-  data: PropTypes.array,
-};
-
-export default function NavSection({ data = [], ...other }) {
+export default function NavSection() {
   return (
-    <Box {...other}>
+    <Box>
       <List disablePadding sx={{ p: 1 }}>
         <ListSubheader sx={{ bgcolor: 'inherit' }}>Tutaj pracujemy</ListSubheader>
         <NavItem
@@ -22,14 +19,51 @@ export default function NavSection({ data = [], ...other }) {
           item={{
             title: 'products',
             path: '/dashboard/products',
-            icon: <SvgColor src={`/assets/icons/navbar/ic_cart.svg`} sx={{ width: 1, height: 1 }} />,
+            icon: icon('ic_cart'),
           }}
         />
         <Divider sx={{ my: 4 }} />
 
-        {data.map((item) => (
-          <NavItem key={item.title} item={item} />
-        ))}
+        <NavItem
+          key='dashboard'
+          item={{
+            title: 'dashboard',
+            path: '/dashboard/app',
+            icon: icon('ic_analytics'),
+          }}
+        />
+        <NavItem
+          key='user'
+          item={{
+            title: 'user',
+            path: '/dashboard/user',
+            icon: icon('ic_user'),
+          }}
+        />
+        <NavItem
+          key='blog'
+          item={{
+            title: 'blog',
+            path: '/dashboard/blog',
+            icon: icon('ic_blog'),
+          }}
+        />
+        <NavItem
+          key='login'
+          item={{
+            title: 'login',
+            path: '/dashboard/login',
+            icon: icon('ic_lock'),
+          }}
+        />
+        <NavItem
+          key='notFound'
+          item={{
+            title: 'not found',
+            path: '/dashboard/404',
+            icon: icon('ic_disabled'),
+          }}
+        />
       </List>
     </Box>
   );
@@ -56,7 +90,7 @@ function NavItem({ item }) {
         },
       }}
     >
-      <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon>
+      <StyledNavItemIcon>{icon}</StyledNavItemIcon>
 
       <ListItemText disableTypography primary={title} />
 
