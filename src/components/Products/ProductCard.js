@@ -20,11 +20,12 @@ const StyledProductImg = styled('img')({
 
 // ----------------------------------------------------------------------
 
-ShopProductCard.propTypes = {
+ProductCard.propTypes = {
   product: PropTypes.object,
 };
 
-export default function ShopProductCard({ product }) {
+export const ProductCard = (props) => {
+  const { product } = props;
   const { name, cover, price, colors, status, priceSale } = product;
 
   return (
@@ -75,4 +76,4 @@ export default function ShopProductCard({ product }) {
       </Stack>
     </Card>
   );
-}
+};

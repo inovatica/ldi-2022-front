@@ -17,7 +17,7 @@ import {
 } from '@mui/material';
 // components
 import Iconify from '../Iconify';
-import Scrollbar from '../Scrollbar';
+import { Scrollbar } from '../Scrollbar';
 import { ColorMultiPicker } from '../ColorUtils';
 
 // ----------------------------------------------------------------------
@@ -49,13 +49,14 @@ export const FILTER_COLOR_OPTIONS = [
 
 // ----------------------------------------------------------------------
 
-ShopFilterSidebar.propTypes = {
+ProductFilterSidebar.propTypes = {
   openFilter: PropTypes.bool,
   onOpenFilter: PropTypes.func,
   onCloseFilter: PropTypes.func,
 };
 
-export default function ShopFilterSidebar({ openFilter, onOpenFilter, onCloseFilter }) {
+export const ProductFilterSidebar = (props) => {
+  const { openFilter, onOpenFilter, onCloseFilter } = props;
   return (
     <>
       <Button disableRipple color='inherit' endIcon={<Iconify icon='ic:round-filter-list' />} onClick={onOpenFilter}>
@@ -177,4 +178,4 @@ export default function ShopFilterSidebar({ openFilter, onOpenFilter, onCloseFil
       </Drawer>
     </>
   );
-}
+};
