@@ -59,7 +59,7 @@ export const NavSection = () => (
         key='login'
         item={{
           title: 'login',
-          path: '/dashboard/login',
+          path: '/login',
           icon: icon('ic_lock'),
         }}
       />

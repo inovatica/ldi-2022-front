@@ -30,7 +30,7 @@ const Router = () => {
       ],
     },
     {
-      path: 'login',
+      path: '/login',
       element: <LoginPage />,
     },
     {
