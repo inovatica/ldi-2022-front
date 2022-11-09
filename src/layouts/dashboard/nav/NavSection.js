@@ -18,9 +18,9 @@ export default function NavSection({ data = [], ...other }) {
       <List disablePadding sx={{ p: 1 }}>
         <ListSubheader sx={{ bgcolor: 'inherit' }}>Tutaj pracujemy</ListSubheader>
         <NavItem
-          key='product'
+          key='products'
           item={{
-            title: 'product',
+            title: 'products',
             path: '/dashboard/products',
             icon: <SvgColor src={`/assets/icons/navbar/ic_cart.svg`} sx={{ width: 1, height: 1 }} />,
           }}
