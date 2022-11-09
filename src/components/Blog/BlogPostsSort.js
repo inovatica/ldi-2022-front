@@ -4,11 +4,6 @@ import { MenuItem, TextField } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
-BlogPostsSort.propTypes = {
-  options: PropTypes.array,
-  onSort: PropTypes.func,
-};
-
 export const BlogPostsSort = (props) => {
   const { options, onSort } = props;
   return (
@@ -20,4 +15,9 @@ export const BlogPostsSort = (props) => {
       ))}
     </TextField>
   );
+};
+
+BlogPostsSort.propTypes = {
+  options: PropTypes.array,
+  onSort: PropTypes.func,
 };

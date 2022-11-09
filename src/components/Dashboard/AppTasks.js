@@ -19,12 +19,6 @@ import Iconify from '../Iconify';
 
 // ----------------------------------------------------------------------
 
-AppTasks.propTypes = {
-  title: PropTypes.string,
-  subheader: PropTypes.string,
-  list: PropTypes.array.isRequired,
-};
-
 export const AppTasks = (props) => {
   const { title, subheader, list, ...other } = props;
 
@@ -62,16 +56,13 @@ export const AppTasks = (props) => {
   );
 };
 
-// ----------------------------------------------------------------------
-
-TaskItem.propTypes = {
-  checked: PropTypes.bool,
-  onChange: PropTypes.func,
-  task: PropTypes.shape({
-    id: PropTypes.string,
-    label: PropTypes.string,
-  }),
+AppTasks.propTypes = {
+  title: PropTypes.string,
+  subheader: PropTypes.string,
+  list: PropTypes.array.isRequired,
 };
+
+// ----------------------------------------------------------------------
 
 const TaskItem = (props) => {
   const { task, checked, onChange } = props;
@@ -168,4 +159,13 @@ const TaskItem = (props) => {
       </Popover>
     </Stack>
   );
+};
+
+TaskItem.propTypes = {
+  checked: PropTypes.bool,
+  onChange: PropTypes.func,
+  task: PropTypes.shape({
+    id: PropTypes.string,
+    label: PropTypes.string,
+  }),
 };

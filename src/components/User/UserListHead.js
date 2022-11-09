@@ -16,19 +16,9 @@ const visuallyHidden = {
   clip: 'rect(0 0 0 0)',
 };
 
-UserListHead.propTypes = {
-  order: PropTypes.oneOf(['asc', 'desc']),
-  orderBy: PropTypes.string,
-  rowCount: PropTypes.number,
-  headLabel: PropTypes.array,
-  numSelected: PropTypes.number,
-  onRequestSort: PropTypes.func,
-  onSelectAllClick: PropTypes.func,
-};
-
 export const UserListHead = (props) => {
   const { order, orderBy, rowCount, headLabel, numSelected, onRequestSort, onSelectAllClick } = props;
-  
+
   const createSortHandler = (property) => (event) => {
     onRequestSort(event, property);
   };
@@ -65,4 +55,14 @@ export const UserListHead = (props) => {
       </TableRow>
     </TableHead>
   );
+};
+
+UserListHead.propTypes = {
+  order: PropTypes.oneOf(['asc', 'desc']),
+  orderBy: PropTypes.string,
+  rowCount: PropTypes.number,
+  headLabel: PropTypes.array,
+  numSelected: PropTypes.number,
+  onRequestSort: PropTypes.func,
+  onSelectAllClick: PropTypes.func,
 };

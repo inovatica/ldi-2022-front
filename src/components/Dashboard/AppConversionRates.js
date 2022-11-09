@@ -9,12 +9,6 @@ import { useChart } from '../Chart';
 
 // ----------------------------------------------------------------------
 
-AppConversionRates.propTypes = {
-  title: PropTypes.string,
-  subheader: PropTypes.string,
-  chartData: PropTypes.array.isRequired,
-};
-
 export const AppConversionRates = (props) => {
   const { title, subheader, chartData, ...other } = props;
   
@@ -49,4 +43,10 @@ export const AppConversionRates = (props) => {
       </Box>
     </Card>
   );
+};
+
+AppConversionRates.propTypes = {
+  title: PropTypes.string,
+  subheader: PropTypes.string,
+  chartData: PropTypes.array.isRequired,
 };

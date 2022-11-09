@@ -5,10 +5,6 @@ import { ProductCard } from './ProductCard';
 
 // ----------------------------------------------------------------------
 
-ProductList.propTypes = {
-  products: PropTypes.array.isRequired,
-};
-
 export const ProductList = (props) => {
   const { products, ...other } = props;
 
@@ -21,4 +17,8 @@ export const ProductList = (props) => {
       ))}
     </Grid>
   );
+};
+
+ProductList.propTypes = {
+  products: PropTypes.array.isRequired,
 };

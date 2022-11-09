@@ -7,11 +7,6 @@ import { StyledRootScrollbar, StyledScrollbar } from './styles';
 
 // ----------------------------------------------------------------------
 
-CustomScrollbar.propTypes = {
-  sx: PropTypes.object,
-  children: PropTypes.node,
-};
-
 const CustomScrollbar = (props) => {
   const { children, sx, ...other } = props;
 
@@ -34,6 +29,11 @@ const CustomScrollbar = (props) => {
       </StyledScrollbar>
     </StyledRootScrollbar>
   );
+};
+
+CustomScrollbar.propTypes = {
+  sx: PropTypes.object,
+  children: PropTypes.node,
 };
 
 export const Scrollbar = memo(CustomScrollbar);

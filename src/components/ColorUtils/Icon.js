@@ -7,15 +7,9 @@ import Iconify from '../Iconify';
 
 // ----------------------------------------------------------------------
 
-Icon.propTypes = {
-  sx: PropTypes.object,
-  checked: PropTypes.bool,
-  whiteColor: PropTypes.bool,
-};
-
 export const Icon = (props) => {
   const { checked, whiteColor, sx, ...other } = props;
-  
+
   const shadow = (
     <Box
       sx={{
@@ -76,4 +70,10 @@ export const Icon = (props) => {
       {icon}
     </Box>
   );
+};
+
+Icon.propTypes = {
+  sx: PropTypes.object,
+  checked: PropTypes.bool,
+  whiteColor: PropTypes.bool,
 };

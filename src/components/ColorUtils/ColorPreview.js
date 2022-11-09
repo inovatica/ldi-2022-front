@@ -5,12 +5,6 @@ import { Box, Typography, Stack } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
-ColorPreview.propTypes = {
-  sx: PropTypes.object,
-  limit: PropTypes.number,
-  colors: PropTypes.arrayOf(PropTypes.string),
-};
-
 export const ColorPreview = (props) => {
   const { colors, limit = 3, sx } = props;
   const showColor = colors.slice(0, limit);
@@ -37,4 +31,10 @@ export const ColorPreview = (props) => {
       {colors.length > limit && <Typography variant='subtitle2'>{`+${moreColor}`}</Typography>}
     </Stack>
   );
+};
+
+ColorPreview.propTypes = {
+  sx: PropTypes.object,
+  limit: PropTypes.number,
+  colors: PropTypes.arrayOf(PropTypes.string),
 };

@@ -6,12 +6,6 @@ import { fShortenNumber } from '../../utils/formatNumber';
 
 // ----------------------------------------------------------------------
 
-AppTrafficBySite.propTypes = {
-  title: PropTypes.string,
-  subheader: PropTypes.string,
-  list: PropTypes.array.isRequired,
-};
-
 export const AppTrafficBySite = (props) => {
   const { title, subheader, list, ...other } = props;
   
@@ -42,4 +36,10 @@ export const AppTrafficBySite = (props) => {
       </CardContent>
     </Card>
   );
+};
+
+AppTrafficBySite.propTypes = {
+  title: PropTypes.string,
+  subheader: PropTypes.string,
+  list: PropTypes.array.isRequired,
 };

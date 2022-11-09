@@ -20,10 +20,6 @@ const StyledProductImg = styled('img')({
 
 // ----------------------------------------------------------------------
 
-ProductCard.propTypes = {
-  product: PropTypes.object,
-};
-
 export const ProductCard = (props) => {
   const { product } = props;
   const { name, cover, price, colors, status, priceSale } = product;
@@ -76,4 +72,8 @@ export const ProductCard = (props) => {
       </Stack>
     </Card>
   );
+};
+
+ProductCard.propTypes = {
+  product: PropTypes.object,
 };

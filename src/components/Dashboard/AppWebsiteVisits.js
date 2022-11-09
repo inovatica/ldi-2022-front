@@ -7,13 +7,6 @@ import { useChart } from '../Chart';
 
 // ----------------------------------------------------------------------
 
-AppWebsiteVisits.propTypes = {
-  title: PropTypes.string,
-  subheader: PropTypes.string,
-  chartData: PropTypes.array.isRequired,
-  chartLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
-
 export const AppWebsiteVisits = (props) => {
   const { title, subheader, chartLabels, chartData, ...other } = props;
   
@@ -45,4 +38,11 @@ export const AppWebsiteVisits = (props) => {
       </Box>
     </Card>
   );
+};
+
+AppWebsiteVisits.propTypes = {
+  title: PropTypes.string,
+  subheader: PropTypes.string,
+  chartData: PropTypes.array.isRequired,
+  chartLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

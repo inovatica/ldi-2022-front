@@ -22,14 +22,6 @@ const StyledIcon = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-AppWidgetSummary.propTypes = {
-  color: PropTypes.string,
-  icon: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  total: PropTypes.number.isRequired,
-  sx: PropTypes.object,
-};
-
 export const AppWidgetSummary = (props) => {
   const { title, total, icon, color = 'primary', sx, ...other } = props;
 
@@ -65,4 +57,12 @@ export const AppWidgetSummary = (props) => {
       </Typography>
     </Card>
   );
+};
+
+AppWidgetSummary.propTypes = {
+  color: PropTypes.string,
+  icon: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  total: PropTypes.number.isRequired,
+  sx: PropTypes.object,
 };

@@ -49,12 +49,6 @@ export const FILTER_COLOR_OPTIONS = [
 
 // ----------------------------------------------------------------------
 
-ProductFilterSidebar.propTypes = {
-  openFilter: PropTypes.bool,
-  onOpenFilter: PropTypes.func,
-  onCloseFilter: PropTypes.func,
-};
-
 export const ProductFilterSidebar = (props) => {
   const { openFilter, onOpenFilter, onCloseFilter } = props;
   return (
@@ -178,4 +172,10 @@ export const ProductFilterSidebar = (props) => {
       </Drawer>
     </>
   );
+};
+
+ProductFilterSidebar.propTypes = {
+  openFilter: PropTypes.bool,
+  onOpenFilter: PropTypes.func,
+  onCloseFilter: PropTypes.func,
 };

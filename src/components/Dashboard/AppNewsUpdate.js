@@ -9,12 +9,6 @@ import { Scrollbar } from '../Scrollbar';
 
 // ----------------------------------------------------------------------
 
-AppNewsUpdate.propTypes = {
-  title: PropTypes.string,
-  subheader: PropTypes.string,
-  list: PropTypes.array.isRequired,
-};
-
 export const AppNewsUpdate = (props) => {
   const { title, subheader, list, ...other } = props;
 
@@ -41,16 +35,13 @@ export const AppNewsUpdate = (props) => {
   );
 };
 
-// ----------------------------------------------------------------------
-
-NewsItem.propTypes = {
-  news: PropTypes.shape({
-    description: PropTypes.string,
-    image: PropTypes.string,
-    postedAt: PropTypes.instanceOf(Date),
-    title: PropTypes.string,
-  }),
+AppNewsUpdate.propTypes = {
+  title: PropTypes.string,
+  subheader: PropTypes.string,
+  list: PropTypes.array.isRequired,
 };
+
+// ----------------------------------------------------------------------
 
 const NewsItem = (props) => {
   const { news } = props;
@@ -75,4 +66,13 @@ const NewsItem = (props) => {
       </Typography>
     </Stack>
   );
+};
+
+NewsItem.propTypes = {
+  news: PropTypes.shape({
+    description: PropTypes.string,
+    image: PropTypes.string,
+    postedAt: PropTypes.instanceOf(Date),
+    title: PropTypes.string,
+  }),
 };

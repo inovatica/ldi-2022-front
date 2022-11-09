@@ -6,13 +6,6 @@ import { Icon } from './Icon';
 
 // ----------------------------------------------------------------------
 
-ColorMultiPicker.propTypes = {
-  sx: PropTypes.object,
-  colors: PropTypes.array,
-  onChangeColor: PropTypes.func,
-  selected: PropTypes.arrayOf(PropTypes.string),
-};
-
 export const ColorMultiPicker = (props) => {
   const { colors, selected, onChangeColor, sx, ...other } = props;
   return (
@@ -41,4 +34,11 @@ export const ColorMultiPicker = (props) => {
       })}
     </Box>
   );
+};
+
+ColorMultiPicker.propTypes = {
+  sx: PropTypes.object,
+  colors: PropTypes.array,
+  onChangeColor: PropTypes.func,
+  selected: PropTypes.arrayOf(PropTypes.string),
 };

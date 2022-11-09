@@ -7,12 +7,6 @@ import { fDateTime } from '../../utils/formatTime';
 
 // ----------------------------------------------------------------------
 
-AppOrderTimeline.propTypes = {
-  title: PropTypes.string,
-  subheader: PropTypes.string,
-  list: PropTypes.array.isRequired,
-};
-
 export const AppOrderTimeline = (props) => {
   const { title, subheader, list, ...other } = props;
 
@@ -37,16 +31,13 @@ export const AppOrderTimeline = (props) => {
   );
 };
 
-// ----------------------------------------------------------------------
-
-OrderItem.propTypes = {
-  isLast: PropTypes.bool,
-  item: PropTypes.shape({
-    time: PropTypes.instanceOf(Date),
-    title: PropTypes.string,
-    type: PropTypes.string,
-  }),
+AppOrderTimeline.propTypes = {
+  title: PropTypes.string,
+  subheader: PropTypes.string,
+  list: PropTypes.array.isRequired,
 };
+
+// ----------------------------------------------------------------------
 
 const OrderItem = (props) => {
   const { item, isLast } = props;
@@ -75,4 +66,13 @@ const OrderItem = (props) => {
       </TimelineContent>
     </TimelineItem>
   );
+};
+
+OrderItem.propTypes = {
+  isLast: PropTypes.bool,
+  item: PropTypes.shape({
+    time: PropTypes.instanceOf(Date),
+    title: PropTypes.string,
+    type: PropTypes.string,
+  }),
 };

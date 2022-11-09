@@ -51,11 +51,6 @@ const StyledCover = styled('img')({
 
 // ----------------------------------------------------------------------
 
-BlogPostCard.propTypes = {
-  post: PropTypes.object.isRequired,
-  index: PropTypes.number,
-};
-
 export const BlogPostCard = (props) => {
   const { post, index } = props;
   const { cover, title, view, comment, share, author, createdAt } = post;
@@ -172,4 +167,9 @@ export const BlogPostCard = (props) => {
       </Card>
     </Grid>
   );
+};
+
+BlogPostCard.propTypes = {
+  post: PropTypes.object.isRequired,
+  index: PropTypes.number,
 };

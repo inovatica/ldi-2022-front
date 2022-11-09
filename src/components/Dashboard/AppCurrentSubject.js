@@ -32,14 +32,6 @@ const StyledChartWrapper = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-AppCurrentSubject.propTypes = {
-  title: PropTypes.string,
-  subheader: PropTypes.string,
-  chartData: PropTypes.array.isRequired,
-  chartColors: PropTypes.arrayOf(PropTypes.string).isRequired,
-  chartLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
-
 export const AppCurrentSubject = (props) => {
   const { title, subheader, chartData, chartColors, chartLabels, ...other } = props;
   
@@ -66,4 +58,12 @@ export const AppCurrentSubject = (props) => {
       </StyledChartWrapper>
     </Card>
   );
+};
+
+AppCurrentSubject.propTypes = {
+  title: PropTypes.string,
+  subheader: PropTypes.string,
+  chartData: PropTypes.array.isRequired,
+  chartColors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  chartLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
