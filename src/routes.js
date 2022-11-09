@@ -2,7 +2,8 @@ import { Navigate, useRoutes } from 'react-router-dom';
 // layouts
 // eslint-disable-next-line import/no-named-as-default
 import DashboardLayout from './layouts/dashboard';
-import SimpleLayout from './layouts/simple';
+// eslint-disable-next-line import/no-named-as-default
+import SimpleLayout from './layouts/Simple';
 //
 import BlogPage from './pages/BlogPage';
 import UserPage from './pages/UserPage';

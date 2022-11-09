@@ -1,1 +1,5 @@
-export { default } from './SimpleLayout';
+import { SimpleLayout } from './SimpleLayout';
+
+export { SimpleLayout };
+
+export default SimpleLayout;
