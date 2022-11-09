@@ -26,15 +26,9 @@ UserListHead.propTypes = {
   onSelectAllClick: PropTypes.func,
 };
 
-export default function UserListHead({
-  order,
-  orderBy,
-  rowCount,
-  headLabel,
-  numSelected,
-  onRequestSort,
-  onSelectAllClick,
-}) {
+export const UserListHead = (props) => {
+  const { order, orderBy, rowCount, headLabel, numSelected, onRequestSort, onSelectAllClick } = props;
+  
   const createSortHandler = (property) => (event) => {
     onRequestSort(event, property);
   };
@@ -42,7 +36,7 @@ export default function UserListHead({
   return (
     <TableHead>
       <TableRow>
-        <TableCell padding="checkbox">
+        <TableCell padding='checkbox'>
           <Checkbox
             indeterminate={numSelected > 0 && numSelected < rowCount}
             checked={rowCount > 0 && numSelected === rowCount}
@@ -71,4 +65,4 @@ export default function UserListHead({
       </TableRow>
     </TableHead>
   );
-}
+};

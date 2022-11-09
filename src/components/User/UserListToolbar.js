@@ -38,7 +38,8 @@ UserListToolbar.propTypes = {
   onFilterName: PropTypes.func,
 };
 
-export default function UserListToolbar({ numSelected, filterName, onFilterName }) {
+export const UserListToolbar = (props) => {
+  const { numSelected, filterName, onFilterName } = props;
   return (
     <StyledRoot
       sx={{
@@ -80,4 +81,4 @@ export default function UserListToolbar({ numSelected, filterName, onFilterName 
       )}
     </StyledRoot>
   );
-}
+};
