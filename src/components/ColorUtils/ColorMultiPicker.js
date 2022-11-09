@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 // @mui
 import { Box, Checkbox } from '@mui/material';
 //
-import Icon from './Icon';
+import { Icon } from './Icon';
 
 // ----------------------------------------------------------------------
 
@@ -13,7 +13,8 @@ ColorMultiPicker.propTypes = {
   selected: PropTypes.arrayOf(PropTypes.string),
 };
 
-export default function ColorMultiPicker({ colors, selected, onChangeColor, sx, ...other }) {
+export const ColorMultiPicker = (props) => {
+  const { colors, selected, onChangeColor, sx, ...other } = props;
   return (
     <Box sx={sx}>
       {colors.map((color) => {
@@ -22,9 +23,9 @@ export default function ColorMultiPicker({ colors, selected, onChangeColor, sx, 
         return (
           <Checkbox
             key={color}
-            size="small"
+            size='small'
             value={color}
-            color="default"
+            color='default'
             checked={selected.includes(color)}
             onChange={() => onChangeColor(color)}
             icon={<Icon whiteColor={whiteColor} />}
@@ -40,4 +41,4 @@ export default function ColorMultiPicker({ colors, selected, onChangeColor, sx, 
       })}
     </Box>
   );
-}
+};

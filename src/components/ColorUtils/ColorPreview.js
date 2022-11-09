@@ -11,13 +11,14 @@ ColorPreview.propTypes = {
   colors: PropTypes.arrayOf(PropTypes.string),
 };
 
-export default function ColorPreview({ colors, limit = 3, sx }) {
+export const ColorPreview = (props) => {
+  const { colors, limit = 3, sx } = props;
   const showColor = colors.slice(0, limit);
 
   const moreColor = colors.length - limit;
 
   return (
-    <Stack component="span" direction="row" alignItems="center" justifyContent="flex-end" sx={sx}>
+    <Stack component='span' direction='row' alignItems='center' justifyContent='flex-end' sx={sx}>
       {showColor.map((color, index) => (
         <Box
           key={color + index}
@@ -33,7 +34,7 @@ export default function ColorPreview({ colors, limit = 3, sx }) {
         />
       ))}
 
-      {colors.length > limit && <Typography variant="subtitle2">{`+${moreColor}`}</Typography>}
+      {colors.length > limit && <Typography variant='subtitle2'>{`+${moreColor}`}</Typography>}
     </Stack>
   );
-}
+};

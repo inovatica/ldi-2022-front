@@ -1,3 +1,3 @@
-export { default as ColorPreview } from './ColorPreview';
-export { default as ColorMultiPicker } from './ColorMultiPicker';
-export { default as ColorSinglePicker } from './ColorSinglePicker';
+export { ColorPreview } from './ColorPreview';
+export { ColorMultiPicker } from './ColorMultiPicker';
+export { ColorSinglePicker } from './ColorSinglePicker';

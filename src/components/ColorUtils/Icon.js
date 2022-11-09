@@ -13,7 +13,9 @@ Icon.propTypes = {
   whiteColor: PropTypes.bool,
 };
 
-export default function Icon({ checked, whiteColor, sx, ...other }) {
+export const Icon = (props) => {
+  const { checked, whiteColor, sx, ...other } = props;
+  
   const shadow = (
     <Box
       sx={{
@@ -74,4 +76,4 @@ export default function Icon({ checked, whiteColor, sx, ...other }) {
       {icon}
     </Box>
   );
-}
+};

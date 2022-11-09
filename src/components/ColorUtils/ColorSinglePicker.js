@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 // @mui
 import { Radio, RadioGroup } from '@mui/material';
 //
-import Icon from './Icon';
+import { Icon } from './Icon';
 
 // ----------------------------------------------------------------------
 
@@ -16,7 +16,7 @@ const ColorSinglePicker = forwardRef(({ colors, ...other }, ref) => (
         <Radio
           key={color}
           value={color}
-          color="default"
+          color='default'
           icon={<Icon whiteColor={whiteColor} />}
           checkedIcon={<Icon checked whiteColor={whiteColor} />}
           sx={{
@@ -34,4 +34,4 @@ ColorSinglePicker.propTypes = {
   colors: PropTypes.arrayOf(PropTypes.string),
 };
 
-export default ColorSinglePicker;
+export { ColorSinglePicker };
