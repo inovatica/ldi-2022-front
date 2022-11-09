@@ -1,5 +1,4 @@
 import { filter } from 'lodash';
-import { sentenceCase } from 'change-case';
 import { useState } from 'react';
 // @mui
 import {
@@ -199,7 +198,7 @@ export default function UserPage() {
                         <TableCell align='left'>{isVerified ? 'Yes' : 'No'}</TableCell>
 
                         <TableCell align='left'>
-                          <Label color={(status === 'banned' && 'error') || 'success'}>{sentenceCase(status)}</Label>
+                          <Label color={(status === 'banned' && 'error') || 'success'}>{status}</Label>
                         </TableCell>
 
                         <TableCell align='right'>

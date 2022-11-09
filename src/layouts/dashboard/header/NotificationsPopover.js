@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { set, sub } from 'date-fns';
-import { noCase } from 'change-case';
 import { faker } from '@faker-js/faker';
 import { useState } from 'react';
 // @mui
@@ -240,7 +239,7 @@ function renderContent(notification) {
     <Typography variant="subtitle2">
       {notification.title}
       <Typography component="span" variant="body2" sx={{ color: 'text.secondary' }}>
-        &nbsp; {noCase(notification.description)}
+        &nbsp; {notification.description.toLowerCase()}
       </Typography>
     </Typography>
   );
