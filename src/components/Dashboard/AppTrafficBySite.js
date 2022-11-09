@@ -8,7 +8,7 @@ import { fShortenNumber } from '../../utils/formatNumber';
 
 export const AppTrafficBySite = (props) => {
   const { title, subheader, list, ...other } = props;
-  
+
   return (
     <Card {...other}>
       <CardHeader title={title} subheader={subheader} />

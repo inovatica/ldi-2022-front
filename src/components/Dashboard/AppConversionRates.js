@@ -11,7 +11,7 @@ import { useChart } from '../Chart';
 
 export const AppConversionRates = (props) => {
   const { title, subheader, chartData, ...other } = props;
-  
+
   const chartLabels = chartData.map((i) => i.label);
 
   const chartSeries = chartData.map((i) => i.value);

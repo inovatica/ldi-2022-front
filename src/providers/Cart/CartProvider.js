@@ -72,7 +72,7 @@ export const removeFromCart = (dispatch, cartItemId, quantity) =>
   dispatch({
     type: 'REMOVE_FROM_CART',
     cartItemId,
-    quantity
+    quantity,
   });
 
 export const clearCart = (dispatch) =>

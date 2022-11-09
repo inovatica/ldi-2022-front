@@ -7,8 +7,8 @@ import { Box } from '@mui/material';
 
 export const SvgColor = forwardRef(({ src, sx, ...other }, ref) => (
   <Box
-    component="span"
-    className="svg-color"
+    component='span'
+    className='svg-color'
     ref={ref}
     sx={{
       width: 24,

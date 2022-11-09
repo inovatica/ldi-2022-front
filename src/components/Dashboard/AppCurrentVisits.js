@@ -33,7 +33,7 @@ const StyledChartWrapper = styled('div')(({ theme }) => ({
 
 export const AppCurrentVisits = (props) => {
   const { title, subheader, chartColors, chartData, ...other } = props;
-  
+
   const theme = useTheme();
 
   const chartLabels = chartData.map((i) => i.label);

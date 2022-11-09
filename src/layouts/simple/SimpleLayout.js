@@ -21,11 +21,11 @@ const StyledHeader = styled('header')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export const SimpleLayout = () => (
-    <>
-      <StyledHeader>
-        <Logo />
-      </StyledHeader>
+  <>
+    <StyledHeader>
+      <Logo />
+    </StyledHeader>
 
-      <Outlet />
-    </>
-  )
+    <Outlet />
+  </>
+);

@@ -9,7 +9,7 @@ import { useChart } from '../Chart';
 
 export const AppWebsiteVisits = (props) => {
   const { title, subheader, chartLabels, chartData, ...other } = props;
-  
+
   const chartOptions = useChart({
     plotOptions: { bar: { columnWidth: '16%' } },
     fill: { type: chartData.map((i) => i.fill) },

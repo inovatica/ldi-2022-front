@@ -6,12 +6,12 @@ import { CartProvider } from './providers/Cart';
 // ----------------------------------------------------------------------
 
 const App = () => (
-    <ThemeProvider>
-      <ChartStyles />
-      <CartProvider>
-        <Router />
-      </CartProvider>
-    </ThemeProvider>
+  <ThemeProvider>
+    <ChartStyles />
+    <CartProvider>
+      <Router />
+    </CartProvider>
+  </ThemeProvider>
 );
 
 export default App;

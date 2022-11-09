@@ -34,7 +34,7 @@ const StyledChartWrapper = styled('div')(({ theme }) => ({
 
 export const AppCurrentSubject = (props) => {
   const { title, subheader, chartData, chartColors, chartLabels, ...other } = props;
-  
+
   const chartOptions = useChart({
     stroke: { width: 2 },
     fill: { opacity: 0.48 },

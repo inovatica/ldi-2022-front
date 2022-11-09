@@ -33,7 +33,7 @@ export const bgBlur = (props) => {
     WebkitBackdropFilter: `blur(${blur}px)`,
     backgroundColor: alpha(color, opacity),
   };
-}
+};
 
 // ----------------------------------------------------------------------
 
@@ -56,23 +56,23 @@ export const bgGradient = (props) => {
   return {
     background: `linear-gradient(${direction}, ${startColor}, ${endColor})`,
   };
-}
+};
 
 // ----------------------------------------------------------------------
 
 export const textGradient = (value) => ({
-    background: `-webkit-linear-gradient(${value})`,
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-  })
+  background: `-webkit-linear-gradient(${value})`,
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+});
 
 // ----------------------------------------------------------------------
 
 export const filterStyles = (value) => ({
-    filter: value,
-    WebkitFilter: value,
-    MozFilter: value,
-  })
+  filter: value,
+  WebkitFilter: value,
+  MozFilter: value,
+});
 
 // ----------------------------------------------------------------------
 
