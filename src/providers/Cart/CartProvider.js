@@ -72,6 +72,7 @@ export const removeFromCart = (dispatch, cartItemId, quantity) =>
   dispatch({
     type: 'REMOVE_FROM_CART',
     cartItemId,
+    quantity
   });
 
 export const clearCart = (dispatch) =>
@@ -91,6 +92,6 @@ export const CartProvider = (props) => {
   );
 };
 
-CartProvider.popTypes = {
+CartProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
