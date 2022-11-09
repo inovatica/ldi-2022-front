@@ -1,9 +1,5 @@
 // @mui
 import { Container, Typography } from '@mui/material';
-// components
-import { ProductList, ProductCartWidget } from '../components/Products';
-// mock
-import PRODUCTS from '../_mock/products';
 
 // ----------------------------------------------------------------------
 
@@ -13,8 +9,6 @@ const ProductsPage = () => (
       Products
     </Typography>
 
-    <ProductList products={PRODUCTS} />
-    <ProductCartWidget />
   </Container>
 );
 
