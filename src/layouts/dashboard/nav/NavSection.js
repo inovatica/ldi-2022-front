@@ -19,6 +19,14 @@ export default function NavSection() {
           item={{
             title: 'products',
             path: '/dashboard/products',
+            icon: icon('ic_products'),
+          }}
+        />
+         <NavItem
+          key='cart'
+          item={{
+            title: 'cart',
+            path: '/dashboard/cart',
             icon: icon('ic_cart'),
           }}
         />
