@@ -23,7 +23,7 @@ export const ProductActions = (props) => {
           <Iconify icon='ic:baseline-minus' />
         </IconButton>
       </Stack>
-      <Button color='primary' onClick={() => onAdd(quantity)}>
+      <Button color='primary' variant='text' onClick={() => onAdd(quantity)}>
         Add To Cart
       </Button>
     </>
