@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { NavLink as RouterLink } from 'react-router-dom';
 // @mui
-import { Box, List, ListItemText, Divider } from '@mui/material';
+import { Box, List, ListItemText, Divider, ListSubheader } from '@mui/material';
 //
 import { StyledNavItem, StyledNavItemIcon } from './styles';
-import SvgColor from '../../../components/svg-color';
+import SvgColor from '../../../components/SvgColor';
 
 // ----------------------------------------------------------------------
 
@@ -16,6 +16,7 @@ export default function NavSection({ data = [], ...other }) {
   return (
     <Box {...other}>
       <List disablePadding sx={{ p: 1 }}>
+        <ListSubheader sx={{ bgcolor: 'inherit' }}>Tutaj pracujemy</ListSubheader>
         <NavItem
           key='product'
           item={{
