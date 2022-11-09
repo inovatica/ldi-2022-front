@@ -25,7 +25,7 @@ export const Card = (theme) => ({
     MuiCardContent: {
       styleOverrides: {
         root: {
-          padding: theme.spacing(3),
+          padding: theme.spacing(2),
         },
       },
     },

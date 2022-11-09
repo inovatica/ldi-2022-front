@@ -1,3 +1,4 @@
+import { useCartState } from '../../providers/Cart';
 // @mui
 import { styled } from '@mui/material/styles';
 import { Badge } from '@mui/material';
@@ -29,10 +30,13 @@ const StyledRoot = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export const ProductCartWidget = () => (
-  <StyledRoot>
-    <Badge showZero badgeContent={0} color='error' max={99}>
-      <Iconify icon='eva:shopping-cart-fill' width={24} height={24} />
-    </Badge>
-  </StyledRoot>
-);
+export const ProductCartWidget = () => {
+  const cartState = useCartState();
+  return (
+    <StyledRoot>
+      <Badge showZero badgeContent={cartState.totalQuantity} color='error' max={99}>
+        <Iconify icon='eva:shopping-cart-fill' width={24} height={24} />
+      </Badge>
+    </StyledRoot>
+  );
+};
