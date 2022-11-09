@@ -13,7 +13,7 @@ import CartPage from './pages/CartPage';
 
 // ----------------------------------------------------------------------
 
-export default function Router() {
+const Router = () => {
   const routes = useRoutes([
     {
       path: '/dashboard',
@@ -46,4 +46,6 @@ export default function Router() {
   ]);
 
   return routes;
-}
+};
+
+export default Router;

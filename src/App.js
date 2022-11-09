@@ -7,11 +7,11 @@ import { ChartStyles } from './components/Chart';
 
 // ----------------------------------------------------------------------
 
-export default function App() {
-  return (
+const App = () => (
     <ThemeProvider>
       <ChartStyles />
       <Router />
     </ThemeProvider>
   );
-}
+
+export default App;
