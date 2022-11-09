@@ -25,7 +25,7 @@ const LANGS = [
 
 // ----------------------------------------------------------------------
 
-export default function LanguagePopover() {
+export const LanguagePopover = () => {
   const [open, setOpen] = useState(null);
 
   const handleOpen = (event) => {

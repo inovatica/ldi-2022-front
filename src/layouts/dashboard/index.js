@@ -1,1 +1,5 @@
-export { default } from './DashboardLayout';
+import { DashboardLayout } from './DashboardLayout';
+
+export { DashboardLayout };
+
+export default DashboardLayout;

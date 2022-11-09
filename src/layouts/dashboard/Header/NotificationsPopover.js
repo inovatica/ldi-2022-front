@@ -23,7 +23,7 @@ import {
 import { fToNow } from '../../../utils/formatTime';
 // components
 import Iconify from '../../../components/Iconify';
-import Scrollbar from '../../../components/Scrollbar';
+import { Scrollbar } from '../../../components/Scrollbar';
 
 // ----------------------------------------------------------------------
 
@@ -75,7 +75,7 @@ const NOTIFICATIONS = [
   },
 ];
 
-export default function NotificationsPopover() {
+export const NotificationsPopover = () => {
   const [notifications, setNotifications] = useState(NOTIFICATIONS);
 
   const totalUnRead = notifications.filter((item) => item.isUnRead === true).length;
@@ -178,23 +178,13 @@ export default function NotificationsPopover() {
       </Popover>
     </>
   );
-}
+};
 
 // ----------------------------------------------------------------------
 
-NotificationItem.propTypes = {
-  notification: PropTypes.shape({
-    createdAt: PropTypes.instanceOf(Date),
-    id: PropTypes.string,
-    isUnRead: PropTypes.bool,
-    title: PropTypes.string,
-    description: PropTypes.string,
-    type: PropTypes.string,
-    avatar: PropTypes.any,
-  }),
-};
+const NotificationItem = (props) => {
+  const { notification } = props;
 
-function NotificationItem({ notification }) {
   const { avatar, title } = renderContent(notification);
 
   return (
@@ -230,11 +220,23 @@ function NotificationItem({ notification }) {
       />
     </ListItemButton>
   );
-}
+};
+
+NotificationItem.propTypes = {
+  notification: PropTypes.shape({
+    createdAt: PropTypes.instanceOf(Date),
+    id: PropTypes.string,
+    isUnRead: PropTypes.bool,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    type: PropTypes.string,
+    avatar: PropTypes.any,
+  }),
+};
 
 // ----------------------------------------------------------------------
 
-function renderContent(notification) {
+const renderContent = (notification) => {
   const title = (
     <Typography variant='subtitle2'>
       {notification.title}
@@ -272,4 +274,4 @@ function renderContent(notification) {
     avatar: notification.avatar ? <img alt={notification.title} src={notification.avatar} /> : null,
     title,
   };
-}
+};

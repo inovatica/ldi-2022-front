@@ -7,10 +7,10 @@ import { bgBlur } from '../../../utils/cssStyles';
 // components
 import Iconify from '../../../components/Iconify';
 //
-import Searchbar from './Searchbar';
-import AccountPopover from './AccountPopover';
-import LanguagePopover from './LanguagePopover';
-import NotificationsPopover from './NotificationsPopover';
+import { Searchbar } from './Searchbar';
+import { AccountPopover } from './AccountPopover';
+import { LanguagePopover } from './LanguagePopover';
+import { NotificationsPopover } from './NotificationsPopover';
 
 // ----------------------------------------------------------------------
 
@@ -38,11 +38,8 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-Header.propTypes = {
-  onOpenNav: PropTypes.func,
-};
-
-export default function Header({ onOpenNav }) {
+export const Header = (props) => {
+  const { onOpenNav } = props;
   return (
     <StyledRoot>
       <StyledToolbar>
@@ -75,4 +72,8 @@ export default function Header({ onOpenNav }) {
       </StyledToolbar>
     </StyledRoot>
   );
-}
+};
+
+Header.propTypes = {
+  onOpenNav: PropTypes.func,
+};

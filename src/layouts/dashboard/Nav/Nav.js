@@ -7,11 +7,11 @@ import { Box, Link, Drawer, Typography, Avatar } from '@mui/material';
 // mock
 import account from '../../../_mock/account';
 // hooks
-import useResponsive from '../../../hooks/useResponsive';
+import { useResponsive } from '../../../hooks/useResponsive';
 // components
 import Logo from '../../../components/Logo';
-import Scrollbar from '../../../components/Scrollbar';
-import NavSection from './NavSection';
+import { Scrollbar } from '../../../components/Scrollbar';
+import { NavSection } from './NavSection';
 // ----------------------------------------------------------------------
 
 const NAV_WIDTH = 280;
@@ -26,12 +26,9 @@ const StyledAccount = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-Nav.propTypes = {
-  openNav: PropTypes.bool,
-  onCloseNav: PropTypes.func,
-};
+export const Nav = (props) => {
+  const { openNav, onCloseNav } = props;
 
-export default function Nav({ openNav, onCloseNav }) {
   const { pathname } = useLocation();
 
   const isDesktop = useResponsive('up', 'lg');
@@ -114,4 +111,9 @@ export default function Nav({ openNav, onCloseNav }) {
       )}
     </Box>
   );
-}
+};
+
+Nav.propTypes = {
+  openNav: PropTypes.bool,
+  onCloseNav: PropTypes.func,
+};
