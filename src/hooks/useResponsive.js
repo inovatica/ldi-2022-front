@@ -4,7 +4,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 // ----------------------------------------------------------------------
 
-export default function useResponsive(query, start, end) {
+export const useResponsive = (query, start, end) => {
   const theme = useTheme();
 
   const mediaUp = useMediaQuery(theme.breakpoints.up(start));
@@ -28,21 +28,4 @@ export default function useResponsive(query, start, end) {
   }
 
   return mediaOnly;
-}
-
-// ----------------------------------------------------------------------
-
-export function useWidth() {
-  const theme = useTheme();
-
-  const keys = [...theme.breakpoints.keys].reverse();
-
-  return (
-    keys.reduce((output, key) => {
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const matches = useMediaQuery(theme.breakpoints.up(key));
-
-      return !output && matches ? key : output;
-    }, null) || 'xs'
-  );
-}
+};

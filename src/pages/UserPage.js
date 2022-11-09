@@ -23,7 +23,7 @@ import {
 // components
 import Label from '../components/Label';
 import Iconify from '../components/Iconify';
-import Scrollbar from '../components/Scrollbar';
+import { Scrollbar } from '../components/Scrollbar';
 import { UserListHead, UserListToolbar } from '../components/User';
 // mock
 import USERLIST from '../_mock/user';

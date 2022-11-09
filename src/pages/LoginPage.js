@@ -2,7 +2,7 @@
 import { styled } from '@mui/material/styles';
 import { Link, Container, Typography, Divider, Stack, Button } from '@mui/material';
 // hooks
-import useResponsive from '../hooks/useResponsive';
+import { useResponsive } from '../hooks/useResponsive';
 // components
 import Logo from '../components/Logo';
 import Iconify from '../components/Iconify';
