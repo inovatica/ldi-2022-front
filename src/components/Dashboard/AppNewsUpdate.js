@@ -2,10 +2,10 @@
 import PropTypes from 'prop-types';
 import { Box, Stack, Link, Card, Button, Divider, Typography, CardHeader } from '@mui/material';
 // utils
-import { fToNow } from '../../../utils/formatTime';
+import { fToNow } from '../../utils/formatTime';
 // components
-import Iconify from '../../../components/Iconify';
-import Scrollbar from '../../../components/Scrollbar';
+import Iconify from '../Iconify';
+import Scrollbar from '../Scrollbar';
 
 // ----------------------------------------------------------------------
 

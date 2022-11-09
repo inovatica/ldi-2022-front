@@ -24,8 +24,7 @@ import {
 import Label from '../components/Label';
 import Iconify from '../components/Iconify';
 import Scrollbar from '../components/Scrollbar';
-// sections
-import { UserListHead, UserListToolbar } from '../sections/@dashboard/user';
+import { UserListHead, UserListToolbar } from '../components/User';
 // mock
 import USERLIST from '../_mock/user';
 

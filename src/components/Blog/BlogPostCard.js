@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { alpha, styled } from '@mui/material/styles';
 import { Box, Link, Card, Grid, Avatar, Typography, CardContent } from '@mui/material';
 // utils
-import { fDate } from '../../../utils/formatTime';
-import { fShortenNumber } from '../../../utils/formatNumber';
+import { fDate } from '../../utils/formatTime';
+import { fShortenNumber } from '../../utils/formatNumber';
 //
-import SvgColor from '../../../components/SvgColor';
-import Iconify from '../../../components/Iconify';
+import SvgColor from '../SvgColor';
+import Iconify from '../Iconify';
 
 // ----------------------------------------------------------------------
 

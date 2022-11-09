@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { Box, Card, Link, Typography, Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
 // utils
-import { fCurrency } from '../../../utils/formatNumber';
+import { fCurrency } from '../../utils/formatNumber';
 // components
-import Label from '../../../components/Label';
-import { ColorPreview } from '../../../components/ColorUtils';
+import Label from '../Label';
+import { ColorPreview } from '../ColorUtils';
 
 // ----------------------------------------------------------------------
 

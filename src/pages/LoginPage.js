@@ -6,8 +6,7 @@ import useResponsive from '../hooks/useResponsive';
 // components
 import Logo from '../components/Logo';
 import Iconify from '../components/Iconify';
-// sections
-import { LoginForm } from '../sections/auth/login';
+import { LoginForm } from '../components/LoginForm';
 
 // ----------------------------------------------------------------------
 
