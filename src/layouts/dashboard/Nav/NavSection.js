@@ -4,7 +4,7 @@ import { NavLink as RouterLink } from 'react-router-dom';
 import { Box, List, ListItemText, Divider, ListSubheader } from '@mui/material';
 //
 import { StyledNavItem, StyledNavItemIcon } from './styles';
-import SvgColor from '../../../components/SvgColor';
+import { SvgColor } from '../../../components/SvgColor';
 
 // ----------------------------------------------------------------------
 const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{ width: 1, height: 1 }} />;

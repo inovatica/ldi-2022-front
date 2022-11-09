@@ -6,7 +6,7 @@ import { Box, Link, Card, Grid, Avatar, Typography, CardContent } from '@mui/mat
 import { fDate } from '../../utils/formatTime';
 import { fShortenNumber } from '../../utils/formatNumber';
 //
-import SvgColor from '../SvgColor';
+import { SvgColor } from '../SvgColor';
 import { Iconify } from '../Iconify';
 
 // ----------------------------------------------------------------------

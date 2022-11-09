@@ -8,7 +8,7 @@ import { StyledLabel } from './styles';
 
 // ----------------------------------------------------------------------
 
-const Label = forwardRef(({ children, color = 'default', variant = 'soft', startIcon, endIcon, sx, ...other }, ref) => {
+export const Label = forwardRef(({ children, color = 'default', variant = 'soft', startIcon, endIcon, sx, ...other }, ref) => {
   const theme = useTheme();
 
   const iconStyle = {
@@ -47,5 +47,3 @@ Label.propTypes = {
   variant: PropTypes.oneOf(['filled', 'outlined', 'ghost', 'soft']),
   color: PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'success', 'warning', 'error']),
 };
-
-export default Label;
