@@ -18,7 +18,8 @@ BlogPostsSearch.propTypes = {
   posts: PropTypes.array.isRequired,
 };
 
-export default function BlogPostsSearch({ posts }) {
+export const BlogPostsSearch = (props) => {
+  const { posts } = props;
   return (
     <Autocomplete
       sx={{ width: 280 }}
@@ -44,4 +45,4 @@ export default function BlogPostsSearch({ posts }) {
       )}
     />
   );
-}
+};

@@ -56,7 +56,8 @@ BlogPostCard.propTypes = {
   index: PropTypes.number,
 };
 
-export default function BlogPostCard({ post, index }) {
+export const BlogPostCard = (props) => {
+  const { post, index } = props;
   const { cover, title, view, comment, share, author, createdAt } = post;
   const latestPostLarge = index === 0;
   const latestPost = index === 1 || index === 2;
@@ -171,4 +172,4 @@ export default function BlogPostCard({ post, index }) {
       </Card>
     </Grid>
   );
-}
+};
