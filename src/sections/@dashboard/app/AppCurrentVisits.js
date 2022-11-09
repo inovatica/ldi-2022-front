@@ -6,7 +6,7 @@ import { Card, CardHeader } from '@mui/material';
 // utils
 import { fNumber } from '../../../utils/formatNumber';
 // components
-import { useChart } from '../../../components/chart';
+import { useChart } from '../../../components/Chart';
 
 // ----------------------------------------------------------------------
 
@@ -69,8 +69,8 @@ export default function AppCurrentVisits({ title, subheader, chartColors, chartD
     <Card {...other}>
       <CardHeader title={title} subheader={subheader} />
 
-      <StyledChartWrapper dir="ltr">
-        <ReactApexChart type="pie" series={chartSeries} options={chartOptions} height={280} />
+      <StyledChartWrapper dir='ltr'>
+        <ReactApexChart type='pie' series={chartSeries} options={chartOptions} height={280} />
       </StyledChartWrapper>
     </Card>
   );

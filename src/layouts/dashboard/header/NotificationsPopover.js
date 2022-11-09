@@ -22,8 +22,8 @@ import {
 // utils
 import { fToNow } from '../../../utils/formatTime';
 // components
-import Iconify from '../../../components/iconify';
-import Scrollbar from '../../../components/scrollbar';
+import Iconify from '../../../components/Iconify';
+import Scrollbar from '../../../components/Scrollbar';
 
 // ----------------------------------------------------------------------
 
@@ -102,8 +102,8 @@ export default function NotificationsPopover() {
   return (
     <>
       <IconButton color={open ? 'primary' : 'default'} onClick={handleOpen} sx={{ width: 40, height: 40 }}>
-        <Badge badgeContent={totalUnRead} color="error">
-          <Iconify icon="eva:bell-fill" />
+        <Badge badgeContent={totalUnRead} color='error'>
+          <Iconify icon='eva:bell-fill' />
         </Badge>
       </IconButton>
 
@@ -123,16 +123,16 @@ export default function NotificationsPopover() {
       >
         <Box sx={{ display: 'flex', alignItems: 'center', py: 2, px: 2.5 }}>
           <Box sx={{ flexGrow: 1 }}>
-            <Typography variant="subtitle1">Notifications</Typography>
-            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+            <Typography variant='subtitle1'>Notifications</Typography>
+            <Typography variant='body2' sx={{ color: 'text.secondary' }}>
               You have {totalUnRead} unread messages
             </Typography>
           </Box>
 
           {totalUnRead > 0 && (
-            <Tooltip title=" Mark all as read">
-              <IconButton color="primary" onClick={handleMarkAllAsRead}>
-                <Iconify icon="eva:done-all-fill" />
+            <Tooltip title=' Mark all as read'>
+              <IconButton color='primary' onClick={handleMarkAllAsRead}>
+                <Iconify icon='eva:done-all-fill' />
               </IconButton>
             </Tooltip>
           )}
@@ -215,7 +215,7 @@ function NotificationItem({ notification }) {
         primary={title}
         secondary={
           <Typography
-            variant="caption"
+            variant='caption'
             sx={{
               mt: 0.5,
               display: 'flex',
@@ -223,7 +223,7 @@ function NotificationItem({ notification }) {
               color: 'text.disabled',
             }}
           >
-            <Iconify icon="eva:clock-outline" sx={{ mr: 0.5, width: 16, height: 16 }} />
+            <Iconify icon='eva:clock-outline' sx={{ mr: 0.5, width: 16, height: 16 }} />
             {fToNow(notification.createdAt)}
           </Typography>
         }
@@ -236,9 +236,9 @@ function NotificationItem({ notification }) {
 
 function renderContent(notification) {
   const title = (
-    <Typography variant="subtitle2">
+    <Typography variant='subtitle2'>
       {notification.title}
-      <Typography component="span" variant="body2" sx={{ color: 'text.secondary' }}>
+      <Typography component='span' variant='body2' sx={{ color: 'text.secondary' }}>
         &nbsp; {notification.description.toLowerCase()}
       </Typography>
     </Typography>
@@ -246,25 +246,25 @@ function renderContent(notification) {
 
   if (notification.type === 'order_placed') {
     return {
-      avatar: <img alt={notification.title} src="/assets/icons/ic_notification_package.svg" />,
+      avatar: <img alt={notification.title} src='/assets/icons/ic_notification_package.svg' />,
       title,
     };
   }
   if (notification.type === 'order_shipped') {
     return {
-      avatar: <img alt={notification.title} src="/assets/icons/ic_notification_shipping.svg" />,
+      avatar: <img alt={notification.title} src='/assets/icons/ic_notification_shipping.svg' />,
       title,
     };
   }
   if (notification.type === 'mail') {
     return {
-      avatar: <img alt={notification.title} src="/assets/icons/ic_notification_mail.svg" />,
+      avatar: <img alt={notification.title} src='/assets/icons/ic_notification_mail.svg' />,
       title,
     };
   }
   if (notification.type === 'chat_message') {
     return {
-      avatar: <img alt={notification.title} src="/assets/icons/ic_notification_chat.svg" />,
+      avatar: <img alt={notification.title} src='/assets/icons/ic_notification_chat.svg' />,
       title,
     };
   }

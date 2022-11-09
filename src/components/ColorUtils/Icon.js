@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { alpha } from '@mui/material/styles';
 import { Box } from '@mui/material';
 //
-import Iconify from '../iconify';
+import Iconify from '../Iconify';
 
 // ----------------------------------------------------------------------
 
@@ -29,7 +29,7 @@ export default function Icon({ checked, whiteColor, sx, ...other }) {
 
   const icon = (
     <Iconify
-      icon="eva:checkmark-fill"
+      icon='eva:checkmark-fill'
       sx={{
         opacity: 0,
         ...(checked && {

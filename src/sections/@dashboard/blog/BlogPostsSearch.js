@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import { Autocomplete, InputAdornment, Popper, TextField } from '@mui/material';
 // components
-import Iconify from '../../../components/iconify';
+import Iconify from '../../../components/Iconify';
 
 // ----------------------------------------------------------------------
 
-const StyledPopper = styled((props) => <Popper placement="bottom-start" {...props} />)({
+const StyledPopper = styled((props) => <Popper placement='bottom-start' {...props} />)({
   width: '280px !important',
 });
 
@@ -31,11 +31,11 @@ export default function BlogPostsSearch({ posts }) {
       renderInput={(params) => (
         <TextField
           {...params}
-          placeholder="Search post..."
+          placeholder='Search post...'
           InputProps={{
             ...params.InputProps,
             startAdornment: (
-              <InputAdornment position="start">
+              <InputAdornment position='start'>
                 <Iconify icon={'eva:search-fill'} sx={{ ml: 1, width: 20, height: 20, color: 'text.disabled' }} />
               </InputAdornment>
             ),

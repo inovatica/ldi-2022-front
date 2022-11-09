@@ -3,7 +3,7 @@ import ReactApexChart from 'react-apexcharts';
 // @mui
 import { Card, CardHeader, Box } from '@mui/material';
 // components
-import { useChart } from '../../../components/chart';
+import { useChart } from '../../../components/Chart';
 
 // ----------------------------------------------------------------------
 
@@ -38,8 +38,8 @@ export default function AppWebsiteVisits({ title, subheader, chartLabels, chartD
     <Card {...other}>
       <CardHeader title={title} subheader={subheader} />
 
-      <Box sx={{ p: 3, pb: 1 }} dir="ltr">
-        <ReactApexChart type="line" series={chartData} options={chartOptions} height={364} />
+      <Box sx={{ p: 3, pb: 1 }} dir='ltr'>
+        <ReactApexChart type='line' series={chartData} options={chartOptions} height={364} />
       </Box>
     </Card>
   );

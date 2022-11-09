@@ -15,7 +15,7 @@ import {
   FormControlLabel,
 } from '@mui/material';
 // components
-import Iconify from '../../../components/iconify';
+import Iconify from '../../../components/Iconify';
 
 // ----------------------------------------------------------------------
 
@@ -36,7 +36,7 @@ export default function AppTasks({ title, subheader, list, ...other }) {
     <Card {...other}>
       <CardHeader title={title} subheader={subheader} />
       <Controller
-        name="taskCompleted"
+        name='taskCompleted'
         control={control}
         render={({ field }) => {
           const onSelected = (task) =>
@@ -104,7 +104,7 @@ function TaskItem({ task, checked, onChange }) {
 
   return (
     <Stack
-      direction="row"
+      direction='row'
       sx={{
         px: 2,
         py: 0.75,
@@ -120,7 +120,7 @@ function TaskItem({ task, checked, onChange }) {
         sx={{ flexGrow: 1, m: 0 }}
       />
 
-      <IconButton size="large" color="inherit" sx={{ opacity: 0.48 }} onClick={handleOpenMenu}>
+      <IconButton size='large' color='inherit' sx={{ opacity: 0.48 }} onClick={handleOpenMenu}>
         <Iconify icon={'eva:more-vertical-fill'} />
       </IconButton>
 

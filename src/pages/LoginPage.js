@@ -4,8 +4,8 @@ import { Link, Container, Typography, Divider, Stack, Button } from '@mui/materi
 // hooks
 import useResponsive from '../hooks/useResponsive';
 // components
-import Logo from '../components/logo';
-import Iconify from '../components/iconify';
+import Logo from '../components/Logo';
+import Iconify from '../components/Iconify';
 // sections
 import { LoginForm } from '../sections/auth/login';
 

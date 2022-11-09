@@ -5,7 +5,7 @@ import { Input, Slide, Button, IconButton, InputAdornment, ClickAwayListener } f
 // utils
 import { bgBlur } from '../../../utils/cssStyles';
 // component
-import Iconify from '../../../components/iconify';
+import Iconify from '../../../components/Iconify';
 
 // ----------------------------------------------------------------------
 
@@ -48,25 +48,25 @@ export default function Searchbar() {
       <div>
         {!open && (
           <IconButton onClick={handleOpen}>
-            <Iconify icon="eva:search-fill" />
+            <Iconify icon='eva:search-fill' />
           </IconButton>
         )}
 
-        <Slide direction="down" in={open} mountOnEnter unmountOnExit>
+        <Slide direction='down' in={open} mountOnEnter unmountOnExit>
           <StyledSearchbar>
             <Input
               autoFocus
               fullWidth
               disableUnderline
-              placeholder="Search…"
+              placeholder='Search…'
               startAdornment={
-                <InputAdornment position="start">
-                  <Iconify icon="eva:search-fill" sx={{ color: 'text.disabled', width: 20, height: 20 }} />
+                <InputAdornment position='start'>
+                  <Iconify icon='eva:search-fill' sx={{ color: 'text.disabled', width: 20, height: 20 }} />
                 </InputAdornment>
               }
               sx={{ mr: 1, fontWeight: 'fontWeightBold' }}
             />
-            <Button variant="contained" onClick={handleClose}>
+            <Button variant='contained' onClick={handleClose}>
               Search
             </Button>
           </StyledSearchbar>

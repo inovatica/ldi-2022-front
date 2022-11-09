@@ -9,8 +9,8 @@ import account from '../../../_mock/account';
 // hooks
 import useResponsive from '../../../hooks/useResponsive';
 // components
-import Logo from '../../../components/logo';
-import Scrollbar from '../../../components/scrollbar';
+import Logo from '../../../components/Logo';
+import Scrollbar from '../../../components/Scrollbar';
 import NavSection from './NavSection';
 //
 import navConfig from './config';
@@ -58,16 +58,16 @@ export default function Nav({ openNav, onCloseNav }) {
       </Box>
 
       <Box sx={{ mb: 5, mx: 2.5 }}>
-        <Link underline="none">
+        <Link underline='none'>
           <StyledAccount>
-            <Avatar src={account.photoURL} alt="photoURL" />
+            <Avatar src={account.photoURL} alt='photoURL' />
 
             <Box sx={{ ml: 2 }}>
-              <Typography variant="subtitle2" sx={{ color: 'text.primary' }}>
+              <Typography variant='subtitle2' sx={{ color: 'text.primary' }}>
                 {account.displayName}
               </Typography>
 
-              <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+              <Typography variant='body2' sx={{ color: 'text.secondary' }}>
                 {account.role}
               </Typography>
             </Box>
@@ -81,7 +81,7 @@ export default function Nav({ openNav, onCloseNav }) {
 
   return (
     <Box
-      component="nav"
+      component='nav'
       sx={{
         flexShrink: { lg: 0 },
         width: { lg: NAV_WIDTH },
@@ -90,7 +90,7 @@ export default function Nav({ openNav, onCloseNav }) {
       {isDesktop ? (
         <Drawer
           open
-          variant="permanent"
+          variant='permanent'
           PaperProps={{
             sx: {
               width: NAV_WIDTH,

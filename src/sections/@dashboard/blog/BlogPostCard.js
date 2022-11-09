@@ -6,8 +6,8 @@ import { Box, Link, Card, Grid, Avatar, Typography, CardContent } from '@mui/mat
 import { fDate } from '../../../utils/formatTime';
 import { fShortenNumber } from '../../../utils/formatNumber';
 //
-import SvgColor from '../../../components/svg-color';
-import Iconify from '../../../components/iconify';
+import SvgColor from '../../../components/SvgColor';
+import Iconify from '../../../components/Iconify';
 
 // ----------------------------------------------------------------------
 
@@ -92,8 +92,8 @@ export default function BlogPostCard({ post, index }) {
           }}
         >
           <SvgColor
-            color="paper"
-            src="/assets/icons/shape-avatar.svg"
+            color='paper'
+            src='/assets/icons/shape-avatar.svg'
             sx={{
               width: 80,
               height: 36,
@@ -131,14 +131,14 @@ export default function BlogPostCard({ post, index }) {
             }),
           }}
         >
-          <Typography gutterBottom variant="caption" sx={{ color: 'text.disabled', display: 'block' }}>
+          <Typography gutterBottom variant='caption' sx={{ color: 'text.disabled', display: 'block' }}>
             {fDate(createdAt)}
           </Typography>
 
           <StyledTitle
-            color="inherit"
-            variant="subtitle2"
-            underline="hover"
+            color='inherit'
+            variant='subtitle2'
+            underline='hover'
             sx={{
               ...(latestPostLarge && { typography: 'h5', height: 60 }),
               ...((latestPostLarge || latestPost) && {
@@ -163,7 +163,7 @@ export default function BlogPostCard({ post, index }) {
                 }}
               >
                 <Iconify icon={info.icon} sx={{ width: 16, height: 16, mr: 0.5 }} />
-                <Typography variant="caption">{fShortenNumber(info.number)}</Typography>
+                <Typography variant='caption'>{fShortenNumber(info.number)}</Typography>
               </Box>
             ))}
           </StyledInfo>

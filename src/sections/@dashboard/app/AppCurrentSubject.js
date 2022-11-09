@@ -4,7 +4,7 @@ import ReactApexChart from 'react-apexcharts';
 import { styled } from '@mui/material/styles';
 import { Card, CardHeader } from '@mui/material';
 // components
-import { useChart } from '../../../components/chart';
+import { useChart } from '../../../components/Chart';
 
 // ----------------------------------------------------------------------
 
@@ -59,8 +59,8 @@ export default function AppCurrentSubject({ title, subheader, chartData, chartCo
     <Card {...other}>
       <CardHeader title={title} subheader={subheader} />
 
-      <StyledChartWrapper dir="ltr">
-        <ReactApexChart type="radar" series={chartData} options={chartOptions} height={340} />
+      <StyledChartWrapper dir='ltr'>
+        <ReactApexChart type='radar' series={chartData} options={chartOptions} height={340} />
       </StyledChartWrapper>
     </Card>
   );
