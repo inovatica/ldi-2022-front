@@ -8,7 +8,7 @@ import Iconify from '../Iconify';
 
 // ----------------------------------------------------------------------
 
-export default function LoginForm() {
+export const LoginForm = () => {
   const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
@@ -50,4 +50,4 @@ export default function LoginForm() {
       </LoadingButton>
     </>
   );
-}
+};
