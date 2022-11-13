@@ -12,12 +12,12 @@ import { ProductActions } from './ProductActions';
 
 export const ProductCard = (props) => {
   const { product } = props;
-  const { id, name, cover, price, colors, status, priceSale } = product;
+  const { id, name, cover, price, colors, status, priceSale, quantity } = product;
 
   const cartDispatch = useCartDispatch();
 
-  const handleOnAdd = (quantity) =>
-    addToCart(cartDispatch, { id, name, cover, price, colors, status, priceSale, quantity });
+  const handleOnAdd = (value) =>
+    addToCart(cartDispatch, { id, name, cover, price, colors, status, priceSale, quantity: value });
 
   return (
     <Card>
@@ -65,7 +65,13 @@ export const ProductCard = (props) => {
       </CardContent>
 
       <CardActions sx={{ flexDirection: 'column', gap: 1 }}>
-        <ProductActions onAdd={(quantity) => handleOnAdd(quantity)} />
+        {quantity ? (
+          <Typography variant='body2' component='span'>
+            Quantity: {quantity}
+          </Typography>
+        ) : (
+          <ProductActions onAdd={handleOnAdd} />
+        )}
       </CardActions>
     </Card>
   );
